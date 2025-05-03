@@ -29,6 +29,11 @@
 
 (defsystem "cl-interpol"
   :version "0.2.7"
+  :description "CL-INTERPOL is a library for Common Lisp which modifies 
+  the reader so that you can have interpolation within strings similar 
+  to Perl or Unix Shell scripts. It also provides various ways to insert 
+  arbitrary characters into literal strings even if your editor/IDE 
+  doesn't support them."
   :license "BSD-2-Clause"
   :serial t
   :depends-on ("cl-unicode"
@@ -41,6 +46,7 @@
   :in-order-to ((test-op (test-op "cl-interpol/test"))))
 
 (defsystem "cl-interpol/test"
+  :description "Self test functionality for the CL-INTERPOL library."
   :depends-on ("cl-interpol"
                "flexi-streams")
   :components ((:module "test"
